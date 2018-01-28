@@ -18,6 +18,7 @@ export class ContactPage {
     console.log(this.navParams.get('type'))
     console.log(this.navParams.get('type'))
     this.navParams.data['message']();
+    console.log(this.navParams.get('year'))
   }
 
   pushPage():void{
