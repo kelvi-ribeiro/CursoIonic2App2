@@ -18,9 +18,22 @@ export class LifecycleEventsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewCanEnter():boolean{
-   console.log('01 IonViewCanEnter Called');
-   return true;
+  ionViewCanEnter():Promise<any>{
+  //  console.log('01 IonViewCanEnter Called');
+  //  return true;
+  return new Promise((resolve,reject)=>{
+    console.log('Aguardando 2 segundos....');
+    setTimeout(()=>{
+      let number = Math.round(Math.random()*100);
+      if(number % 2 == 0){
+        resolve();
+        console.log(`${number} - Autorizado`)
+      }else{
+        reject();
+        console.log(`${number} - Não autorizado`)
+      }
+    },2000)
+  })
   }
   ionViewDidLoad(){
    console.log('02 IonViewDidLoad called');
@@ -34,10 +47,23 @@ export class LifecycleEventsPage {
    console.log('04 IonViewDidEnter called');
 
   }
-  ionViewCanLeave():boolean{
-    console.log('05 IonViewCanLeave Called');
-    return false
-  }
+  ionViewCanLeave():Promise<any>{
+    //  console.log('01 IonViewCanEnter Called');
+    //  return true;
+    return new Promise((resolve,reject)=>{
+      console.log('Aguardando 2 segundos....');
+      setTimeout(()=>{
+        let number = Math.round(Math.random()*100);
+        if(number % 2 == 0){
+          resolve();
+          console.log(`${number} - Autorizado`)
+        }else{
+          reject();
+          console.log(`${number} - Não autorizado`)
+        }
+      },2000)
+    })
+    }
   ionViewWillLeave(){
     console.log('06 ionViewWillLeave Called');
 
