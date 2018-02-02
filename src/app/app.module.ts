@@ -1,5 +1,6 @@
 import { DynamicPjnPageModule } from './../pages/dynamic-pjn/dynamic-pjn.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { KmrComponent } from './../components/kmr/kmr';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
@@ -14,7 +15,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    KmrComponent
   ],
   imports: [
     BrowserModule,
