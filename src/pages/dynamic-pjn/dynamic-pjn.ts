@@ -1,3 +1,4 @@
+import { GithubProvider} from './../../providers/github/github';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,12 +15,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'dynamic-pjn.html',
 })
 export class DynamicPjnPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public users;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public gitProvider:GithubProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DynamicPjnPage');
+    this.gitProvider.getUsers()
+    .subscribe((users:[{}])=>{
+      console.log(users);
+
+      this.users = users
+
+    });
+  }
+
+  onIncrement(){
+    console.log(this.gitProvider.increment());
+
+
   }
 
 }

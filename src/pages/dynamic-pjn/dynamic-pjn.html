@@ -14,5 +14,18 @@
 
 
 <ion-content padding>
+  <ion-card *ngFor="let user of users;">
+    <ion-item >
+        <ion-avatar item-start>
+          <img [src]="user.avatar_url">
+        </ion-avatar>
+        <h2 class="feed-title">{{user.login}}</h2>
+        <p class="feed-date">{{user.id}}</p>
+      </ion-item>
+
+
+
+    </ion-card>
+  <button ion-button block (click)="onIncrement()">Increment</button>
 
 </ion-content>
