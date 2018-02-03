@@ -14,6 +14,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BackgroundGreenDirective } from '../directives/background-green/background-green';
 import { GithubProvider } from '../providers/github/github';
+import { PipesModule } from '../pipes/pipes.module';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +24,13 @@ import { GithubProvider } from '../providers/github/github';
     HomePage,
     ListPage,
     KmrComponent
+
   ],
   imports: [
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    PipesModule,
     DynamicPjnPageModule
   ],
   bootstrap: [IonicApp],
