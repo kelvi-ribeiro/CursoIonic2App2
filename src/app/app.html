@@ -1,4 +1,5 @@
-<ion-menu [content]="myContent">
+<ion-menu [content]="myContent"
+ enabled="true" persistent="true" side="right" swipeEnabled="true" (ionOpen)="onOpen()" (ionClose)="onClose()" (ionDrag)="onDrag()">
 
   <ion-header>
     <ion-toolbar>
@@ -7,7 +8,7 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item *ngFor="let page of pages" (click)="openPage(page)" menuClose>
+      <button ion-item *ngFor="let page of pages" (click)="openPage(page)" menuClose >
         {{page.title}}
 
       </button>

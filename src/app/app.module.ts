@@ -18,7 +18,19 @@ import { HomePage } from '../pages/home/home';
   imports: [
     BrowserModule,
 
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp,{
+      platforms:{
+        ios:{
+          menuType:'reveal'
+        },
+        android:{
+          menuType:'push'
+        },
+        windows:{
+          menuType:'overlay'
+        }
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
