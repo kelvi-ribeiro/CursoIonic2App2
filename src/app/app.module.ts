@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../components/components.module';
 import { MenuSettingsPageModule } from './../pages/menu-settings/menu-settings.module';
 
 import { AboutPage } from './../pages/about/about';
@@ -10,17 +11,20 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { CustomHeaderComponent } from '../components/custom-header/custom-header';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    AboutPage
+    AboutPage,
+    CustomHeaderComponent
 
   ],
   imports: [
     BrowserModule,
+    ComponentsModule,
     MenuSettingsPageModule,
 
     IonicModule.forRoot(MyApp,{
