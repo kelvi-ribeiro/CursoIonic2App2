@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import {AfterViewInit, Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -6,16 +6,18 @@ import { ToastController } from 'ionic-angular';
 
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 
 @Component({
   templateUrl: 'app.html'
 })
-export class MyApp {
+export class MyApp implements AfterViewInit {
   @ViewChild(Nav) nav:Nav;
   pages:[{title:string,component:any}];
   rootPage:any = HomePage;
 
   constructor(platform: Platform,
+              public menuCtrl:MenuController,
               statusBar: StatusBar,
               splashScreen: SplashScreen,
               private toastCtrl:ToastController) {
@@ -30,6 +32,11 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+  ngAfterViewInit(){
+    this.menuCtrl.open('menu1')
+  }
+
+
 
   presentToast(message) {
     let toast = this.toastCtrl.create({
