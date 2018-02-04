@@ -1,4 +1,5 @@
-import { CustomHeaderComponent } from './../components/custom-header/custom-header';
+import { CustomHeaderComponentModule } from './../components/custom-header/custom-header.module';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -7,19 +8,22 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { ButtonsPageModule } from '../pages/buttons/buttons.module';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CustomHeaderComponent
   ],
   imports: [
+    CustomHeaderComponentModule,
+    ButtonsPageModule,
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+
     MyApp,
     HomePage
   ],
