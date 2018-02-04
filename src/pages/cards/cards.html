@@ -1,0 +1,92 @@
+
+ <ion-header>
+    <ion-navbar>
+        <button ion-button icon-only menuToggle="menu1" start >
+          <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>
+         Cards Page
+        </ion-title>
+      </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <h1>Cards</h1>
+  <h2>Basics</h2>
+  <ion-card>
+    <ion-card-content>
+      Card Content
+    </ion-card-content>
+  </ion-card>
+  <h2>Header</h2>
+  <ion-card>
+    <ion-card-header>
+      Header
+    </ion-card-header>
+      <ion-card-content>
+        Card Content
+      </ion-card-content>
+
+  </ion-card>
+  <h2>List of cards</h2>
+  <ion-card>
+    <ion-card-header>
+      </ion-card-header>
+      Explore
+
+        <ion-list>
+          <button ion-item ion-left>
+            <ion-icon name="cart"></ion-icon>
+            Shopping
+          </button>
+          <button ion-item ion-left>
+              <ion-icon name="cafe"></ion-icon>
+              Coffee
+            </button>
+            <button ion-item ion-left>
+                <ion-icon name="planet"></ion-icon>
+                Space
+              </button>
+        </ion-list>
+        <h2>Card Images</h2>
+        <ion-card>
+          <img src="./assets/imgs/arto.jpg" alt="">
+         <ion-card-content>
+           <ion-card-title>
+             My Favorite Wallpapers
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad, enim minus
+               inventore iusto fuga quidem ducimus saepe quas eaque magnam officia nam
+                quasi ex. Eveniet voluptate natus nisi perspiciatis maiores. Voluptas natus quis error ipsa?</p>
+           </ion-card-title>
+         </ion-card-content>
+         <ion-row no-padding>
+           <ion-col>
+             <button ion-button clear small color="primary" icon-left>
+               <ion-icon name="star"></ion-icon>
+               Favorite
+             </button>
+           </ion-col>
+
+           <ion-col text-center>
+              <button ion-button clear small color="primary" icon-left>
+                <ion-icon name="musical-notes"></ion-icon>
+                Listen
+              </button>
+            </ion-col>
+
+
+            <ion-col text-center>
+                <button ion-button clear small color="primary" icon-left>
+                  <ion-icon name="share-alt"></ion-icon>
+                  Share
+                </button>
+              </ion-col>
+         </ion-row>
+
+        </ion-card>
+
+  </ion-card>
+</ion-content>

@@ -1,9 +1,12 @@
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { CardsPageModule } from '../pages/cards/cards.module';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
@@ -14,12 +17,14 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
+    CardsPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+
   ],
   providers: [
     StatusBar,
